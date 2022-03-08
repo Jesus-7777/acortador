@@ -44,6 +44,16 @@ def crearUrlPost():
     cursor=db.cursor()
     cursor.execute("insert into enlaces(exten,cort) values(%s,%s) ",(exten_url,url_corto()))
     cursor.close()
+    
     return redirect(url_for('index'))
+
+@app.get('/<urlId>')
+def traerUrl(urlId):
+    cursor=db.cursor()
+    cursor.execute("SELECT exten FROM enlaces WHERE cort=%(cort)s",{'cort':urlId})
+    productos=cursor.fetchone()
+    cursor.close()
+    #return productos[0]
+    return render_template("/index.html", contactoId = productos[0])
 
 app.run(debug=True)
