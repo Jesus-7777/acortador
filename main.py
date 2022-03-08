@@ -29,18 +29,21 @@ def index():
     cursor=close()
     return render_template("index.html",productos=productos)
 
+def url_corto():
+    letters = string.ascii_lowercase + string.ascii_uppercase
+    while True:
+        rand_letters = random.choices(letters, k=4)
+        rand_letters = "".join(rand_letters)
+        return rand_letters
 
 @app.post("/")
 def crearUrlPost():
     exten_url=request.form.get('exten')
+    short_url = url_corto()
+    print(short_url)
     cursor=db.cursor()
-    
     cursor.execute("insert into enlaces(exten,cort) values(%s,%s) ",(exten_url,url_corto()))
-    
     cursor.close()
     return redirect(url_for('index'))
 
-def url_corto():
-    visual='hola mundo'
-    return visual
 app.run(debug=True)
