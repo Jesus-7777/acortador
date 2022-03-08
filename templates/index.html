@@ -23,7 +23,7 @@
                     <td scope="row"></td>
                     <td>{{producto['id']}}</td>
                     <td>{{producto['exten']}}</td>
-                    <td>{{producto['cort']}}</td>
+                    <td>http://localhost:5000/{{producto['cort']}}</td>
                 </tr>
                 {%endfor%}
             </tbody>
@@ -36,5 +36,6 @@
         </div>
         <button type="submit">Acortar</button>
     </form>
+    <p>{{contactoId}}</p>
 </body>
 </html>
