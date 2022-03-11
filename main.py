@@ -5,10 +5,10 @@ import random
 import string
 
 db=mysql.connector.connect(
-    host='localhost',
-    password='',
-    user='root',
-    database='dataurl',
+    host='academia.c1mebdhdxytu.us-east-1.rds.amazonaws.com',
+    password='ALrUBIaLYcHR',
+    user='p8',
+    database='p8',
     port=3306
 )
 db.autocommit=True
