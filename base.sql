@@ -12,9 +12,9 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Volcando estructura de base de datos para dataurl
-CREATE DATABASE IF NOT EXISTS `dataurl` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `dataurl`;
+   
+
+   
 
 -- Volcando estructura para tabla dataurl.enlaces
 CREATE TABLE IF NOT EXISTS `enlaces` (

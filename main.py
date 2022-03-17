@@ -5,10 +5,10 @@ import random
 import string
 
 db=mysql.connector.connect(
-    host='localhost',
-    password='',
-    user='root',
-    database='dataurl',
+    host='academia.c1mebdhdxytu.us-east-1.rds.amazonaws.com',
+    password='ALrUBIaLYcHR',
+    user='p8',
+    database='p8',
     port=3306
 )
 db.autocommit=True
@@ -59,4 +59,4 @@ def traerUrl(urlId):
     #return render_template("index.html", contactoId = productos[0])
     #return render_template(redirect('index', contactoId = productos[0]))
 
-app.run(debug=True)
+""" app.run(debug=True) """
